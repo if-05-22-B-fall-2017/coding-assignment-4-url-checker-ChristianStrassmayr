@@ -26,4 +26,7 @@ import java.util.regex.Pattern;
 
 public class HttpUrlChecker {
 
+    static Matcher getMatcher(String httptooshort) {
+        return Pattern.compile("^https?:\\/\\/(\\w+([\\/\\-\\.]\\w)*)+(\\.[a-z]+)+$").matcher(httptooshort);
+    }
 }
